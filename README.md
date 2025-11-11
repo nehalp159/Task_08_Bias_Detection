@@ -85,7 +85,7 @@ Task_08_Bias_Detection/
 
 ## Installation Instructions
 1. Clone the repository:
-git clone https://github.com/yourusername/Task_08_Bias_Detection.git
+git clone https://github.com/nehalp159/Task_08_Bias_Detection.git
 cd Task_08_Bias_Detection
 
 2. Create & activate a virtual environment:
