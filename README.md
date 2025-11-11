@@ -41,45 +41,58 @@ All raw datasets are excluded via `.gitignore`.
 ## Project Structure
 Task_08_Bias_Detection/
 │
-├── src/                   # core experiment scripts
-│ ├── experiment_design.py
-│ ├── run_experiment.py
-│ ├── analyze_bias.py
-│ └── validate_claims.py
+├── .gitignore
+├── README.md
+├── requirements.txt
+│
+├── prompts/
+│   ├── hypotheses.yaml
+│   └── templates/
+│       ├── neutral.txt
+│       ├── positive.txt
+│       ├── negative.txt
+│       └── demographic.txt
+│
+├── src/
+│   ├── experiment_design.py       # generates controlled prompts
+│   ├── run_experiment.py          # executes prompt–response collection
+│   ├── analyze_bias.py            # computes sentiment and first-mention metrics
+│   ├── validate_claims.py         # detects and logs factual inconsistencies
 │
 ├── analysis/
-│ ├── make_plots.py        # generates figures & summary table
-│ ├── summary.json
-│ ├── response_metrics.csv
-│ ├── contingency_first_mention.csv
-│ ├── fabrication_checks.csv
-│ ├── figures/
-│ │ ├── avg_sentiment_by_condition.png
-│ │ └── first_mention_distribution.png
-│ └── summary_tables/
-│ └── bias_summary.csv
+│   ├── summary.json               # overall metrics summary
+│   ├── make_plots.py              # generates visualizations
+│   ├── figures/
+│   │   ├── avg_sentiment_by_condition.png
+│   │   └── first_mention_distribution.png
+│   ├── summary_tables/
+│   │   └── bias_summary.csv
 │
 ├── reports/
-│ └── REPORT.md            # final written report
+│   └── REPORT.md                  # final narrative and interpretation
 │
-├── results/
-│ └── logs/                # prompt & response JSONL logs
-│
-├── .gitignore
-├── requirements.txt
-└── README.md
+└── results/
+    └── logs/                      # JSONL prompt–response logs (no raw data)
 
 ---
 
 ## Requirements
 pandas
+
 matplotlib
+
 textblob
+
 numpy
+
 scipy
+
 jsonlines
+
 tqdm
+
 requests
+
 python-dotenv
 
 ## Installation Instructions
@@ -111,38 +124,56 @@ python analysis/make_plots.py
 
 ## Key Findings
 Average sentiment differs across framings:
+
 Demographic ≈ −0.19
+
 Neutral ≈ −0.15
+
 Negative ≈ −0.13
+
 Positive ≈ −0.05
+
 Overall, demographic priming generated the most negative tone.
+
 Chi-square N/A indicates no statistically significant preference in the first-mentioned entity.
+
 No sign of systematic deception.
 
 ## Results / Artifacts
 analysis/figures/avg_sentiment_by_condition.png
+
 analysis/figures/first_mention_distribution.png
+
 analysis/summary_tables/bias_summary.csv
+
 reports/REPORT.md
 
 ## Ethics & Disclosure
 All information (Entities A/B/C) is anonymised.
+
 PII and real-world subjects are excluded.
+
 In line with GitHub and IRB guidelines, all raw datasets are excluded.
 
 ## Challenges Encountered
 Aligning the prompt tone without letting "neutral" and "negative" overlap.
+
 Stopping the leakage of untracked data while making GitHub commits.
+
 Managing sentiment polarity mismatches during simulated runs.
 
 ## Future Improvements
 Use live LLM APIs (Gemini, Anthropic, OpenAI).
+
 Add measurements for bias-classifiers and toxicity.
+
 For qualitative bias coding, add human annotation.
+
 Automate comparisons between models.
 
 ## Overall Conclusion
 Subtle bias is confirmed by the measurable impact of framing & demographic references on the mood of LLM-generated narratives.
+
 This framework offers controlled bias-auditing experiments a reproducible base.
 
 ## Contact
