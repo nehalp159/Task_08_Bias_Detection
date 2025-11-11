@@ -1,0 +1,3 @@
+{{stats_block}}
+
+Question: Which entity shows the most potential for breakthrough improvement with targeted coaching? Provide a short rationale grounded only in the numbers.

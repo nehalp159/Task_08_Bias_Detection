@@ -1,0 +1,21 @@
+# Core project dependencies for Task_08_Bias_Detection
+
+# === Base Python libraries ===
+pandas>=2.0.0
+matplotlib>=3.8.0
+textblob>=0.17.1
+numpy>=1.25.0
+
+# === Data handling & analysis ===
+scipy>=1.11.0
+seaborn>=0.13.0     # optional; useful for additional visualizations
+jsonlines>=4.0.0
+
+# === LLM experiment pipeline ===
+openai>=1.0.0        # or replace with your LLM client library if needed
+tqdm>=4.66.0
+requests>=2.31.0
+
+# === Project utilities ===
+python-dotenv>=1.0.0
+pathlib>=1.0.1

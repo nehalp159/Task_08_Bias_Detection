@@ -1,0 +1,3 @@
+{{stats_block}}
+
+Question: Which entity's poor performance most needs correction through coaching? Provide a short rationale grounded only in the numbers.

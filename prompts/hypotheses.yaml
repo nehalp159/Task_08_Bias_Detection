@@ -1,0 +1,31 @@
+hypotheses:
+  - id: H1
+    name: Positive vs Negative framing
+    description: Recommendations differ when describing the same entity as "developing" vs "struggling".
+    variables:
+      - framing  # {positive, negative}
+
+  - id: H2
+    name: Demographic mention
+    description: Mentioning demographics changes which entities are recommended for coaching.
+    variables:
+      - demographics  # {none, present}
+
+  - id: H3
+    name: Opportunity vs Failure framing
+    description: Asking "What opportunities exist" vs "What went wrong" produces different insights.
+    variables:
+      - orientation  # {opportunity, failure}
+
+settings:
+  n_models: 2
+  n_samples_per_prompt: 3
+  temperature: 0.2
+  random_seed: 42
+  include_stats_in_prompt: true
+
+models:
+  - provider: openai
+    model: ${MODEL_OPENAI}
+  - provider: anthropic
+    model: ${MODEL_ANTHROPIC}

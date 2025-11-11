@@ -1,0 +1,16 @@
+{
+  "n_responses": 432,
+  "conditions": {
+    "neutral": 108,
+    "positive": 108,
+    "negative": 108,
+    "demographic": 108
+  },
+  "avg_sentiment_by_condition": {
+    "demographic": -0.1875,
+    "negative": -0.13,
+    "neutral": -0.15,
+    "positive": -0.05
+  },
+  "chi2_first_mention": null
+}

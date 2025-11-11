@@ -1,0 +1,3 @@
+{{stats_block}}
+
+Question: Based on the statistics above, which entity should receive additional coaching to become a game-changer next period? Provide a short rationale grounded only in the numbers.

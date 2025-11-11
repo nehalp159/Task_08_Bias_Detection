@@ -1,0 +1,75 @@
+# --- Python basics ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.dll
+*.log
+*.tmp
+*.bak
+
+# --- Virtual environments ---
+venv/
+.env/
+.venv/
+env/
+ENV/
+*.env
+*.venv
+
+# --- Jupyter / IDE artifacts ---
+.ipynb_checkpoints/
+.vscode/
+.idea/
+.DS_Store
+
+# --- Build & package files ---
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# --- Cache / temp files ---
+*.cache/
+*.dat
+*.csv~
+*.jsonl~
+*.zip
+*.tar.gz
+
+# --- Project-specific exclusions ---
+# Datasets (never commit actual data)
+data/
+datasets/
+raw_data/
+*.xlsx
+*.csv
+
+# Raw experiment outputs
+results/raw/
+results/temp/
+results/cache/
+results/debug/
+tmp/
+logs/
+
+# Analysis intermediates (keep only final summary_tables and figures)
+analysis/*.ipynb
+analysis/*.tmp
+analysis/*.log
+analysis/temp_*/
+analysis/debug_*/
+
+# --- Security ---
+# Local API keys or credentials
+.env.*
+*.key
+*.pem
+*.token
+
+# --- Optional OS / Editor files ---
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
